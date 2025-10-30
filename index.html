@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width,initial-scale=1' />
+  <title>Brew Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class='site-header'>
+    <div class='container'>
+      <div class='logo'><img src='images/brew_daily_logo.png'> Brew Daily</div>
+      <nav class='nav' id='main-nav'>
+        <a href='#features'>Features</a>
+        <a href='#pricing'>Pricing</a>
+        <a href='#contact'>Contact</a>
+      </nav>
+      <button class='hamburger' id='hamburger' aria-label='Toggle navigation'>&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class='hero'>
+      <div class='container hero-content'>
+        <div class='hero-text'>
+          <h1>Brew Daily</h1>
+          <p>Your next perfect coffee is right here.</p>
+          <a class='btn' href='#signup'>Get Started</a>
+        </div>
+        <div class='hero-image' aria-hidden='true'>
+          <img src='images/coffee4.jpg' alt='Our production process.' />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id='features' class='features'>
+      <div class='container'>
+        <h2>Main Features</h2>
+        <div class='features-grid'>
+          <div class='feature'>
+            <h3>Comfort</h3>
+            <p>Remove the unnecessary stress from your life, with fresh coffee every morning.</p>
+          </div>
+          <div class='feature'>
+            <h3>Pricing</h3>
+            <p>We keep our prices reasonable for all, all while ensuring fair pay for workers.</p>
+          </div>
+          <div class='feature'>
+            <h3>Flexibility</h3>
+            <p>With three different plans to choose from, you are sure to find the perfect one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call To Action -->
+    <section id='signup' class='cta'>
+      <div class='container cta-content'>
+        <div class='cta-text'>
+          <h2>Ready to get started?</h2>
+          <p>Join a growing number of people using Brew Daily to make life simpler. No credit card required.</p>
+        </div>
+
+        <form class='cta-form' action='#' onsubmit="event.preventDefault(); alert('Thanks — form submitted (demo)');">
+          <label for='email' class='sr-only'>Email address</label>
+          <input id='email' name='email' type='email' placeholder='you@example.com' required>
+          <button type='submit' class='btn'>Get Started</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id='testimonials' class='testimonials'>
+      <div class='container'>
+        <h2>What our users say</h2>
+        <div class='testimonials-grid'>
+          <div class='testimonial'>
+            <p>"Finally a reliable coffee service. My mornings have become so smooth."</p>
+            <h4>- Alex R.</h4>
+          </div>
+          <div class='testimonial'>
+            <p>"Perfect tasting every time, and a price I cannot say no to. Highly recommend!"</p>
+            <h4>- Jamie L.</h4>
+          </div>
+          <div class='testimonial'>
+            <p>"I can't imagine my day without this. It saves so much time."</p>
+            <h4>- Morgan S.</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id='pricing' class='pricing'>
+      <div class='container'>
+        <h2>Pricing Plans</h2>
+        <div class='pricing-grid'>
+          <div class='plan'>
+            <h3>Basic</h3>
+            <p class='price'>£9/mo</p>
+            <ul>
+              <li>20% off all coffees bought in store.</li>
+              <li>Second coffee is half price.</li>
+              <li>Entered into a draw for a free coffee, every week.</li>
+            </ul>
+            <a href='#signup' class='btn'>Choose Plan</a>
+          </div>
+          <div class='plan'>
+            <h3>Pro</h3>
+            <p class='price'>$29/mo</p>
+            <ul>
+              <li>30% off all coffees bought in store.</li>
+              <li>Second coffee is half price.</li>
+              <li>Third coffee is just 50p.</li>
+              <li>Entered into a draw for a free coffee every week.</li>
+              <li>No delivery charges on online orders.</li>
+              <li>One free cappuccino/latte every month. Redeem in store.</li>
+            </ul>
+            <a href='#signup' class='btn'>Choose Plan</a>
+          </div>
+          <div class='plan'>
+            <h3>Premium</h3>
+            <p class='price'>$49/mo</p>
+            <ul>
+              <li>One free coffee waiting for you, in store, every working day.</li>
+              <li>Second coffee is 50% off.</li>
+              <li>Third coffee is just 50p.</li>
+              <li>No delivery charges on online orders.</li>
+              <li>10% off all online orders.</li>
+              <li>One free cappuccino/latte every month. Redeem in store.</li>
+              <li>Choose a custom design for your coffee.</li>
+              <li>Get a warm pastry alongside for half price.</li>
+            </ul>
+            <a href='#signup' class='btn'>Choose Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class='site-footer'>
+    <div class='container footer-content'>
+      <p>&copy; 2025 Brew Daily. All rights reserved.</p>
+      <div class='social-links'>
+        <a href='#' aria-label='Twitter'>Twitter</a>
+        <a href='#' aria-label='Facebook'>Facebook</a>
+        <a href='#' aria-label='LinkedIn'>LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('main-nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
